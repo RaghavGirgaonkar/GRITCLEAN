@@ -1,0 +1,9 @@
+{
+"psdfile": "/filepath/GVSsegPSDs.mat",
+"hdf5filenames": "/filepath/GVS_hdf5_files.txt",
+"segfile": "/filepath/GVS_segments.txt",
+"sampFreq": 4096,
+"segnum": 110,
+"outfilename": "/filepath/GVSsegPSDs.mat",
+"threshold": 0.125
+}

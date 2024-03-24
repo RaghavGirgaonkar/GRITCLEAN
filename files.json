@@ -1,0 +1,7 @@
+{
+"output_struct_location": "outStruct_tau.mat",
+"bestlocplot": "bestloc_tau.png",
+"bestfitplot": "bestfitness_tau.png",
+"psoresultplot": "psoresults_tau.png",
+"candidatefile": "output.txt"
+}
