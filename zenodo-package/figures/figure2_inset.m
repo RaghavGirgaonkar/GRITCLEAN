@@ -1,0 +1,20 @@
+masses = [1,1.7];
+phase = 0;
+ta = 138;
+datalen = 512;
+snr = 15;
+sampFreq = 4096;
+type = 2;
+
+signal = gensignal(masses, phase, ta, datalen, snr, sampFreq, type);
+[s,f,t] = spectrogram(signal((ta-0.1)*sampFreq:(ta+0.5)*sampFreq), 256, [],[], 4096);
+logS = log10(abs(s));
+fmin = find(f <= 32, 1, 'last');
+fmax = find(f <= 1010, 1, 'last');
+imagesc(t,f(fmin:fmax),logS((fmin:fmax),:)); axis xy; xlabel('Time (s)','FontWeight','bold'); 
+ylabel('Frequency (Hz)','FontWeight','bold'); 
+c = colorbar; 
+c.FontSize = 70; 
+ax = gca(); 
+set(gca,'FontWeight','bold');
+ax.XAxis.FontSize = 70; ax.YAxis.FontSize = 70;

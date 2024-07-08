@@ -1,0 +1,5 @@
+{
+"signalparamfile": "signal_negative.json",
+"psoparamfile": "pso.json",
+"filenames": "files_negative.json"
+}
