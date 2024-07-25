@@ -1,7 +1,5 @@
 %Get image matrix
-% S = load('unphysicalsectors_posspace.mat');
-% S = load('../../../../SP_bypassed_imagvals.mat');
-S = load('unphysicalsectors_posspace.mat');
+S = load('SP_imagvals.mat');
 Fmatrix = S.fitvals;
 % Fmatrix = Fmatrix./(max(Fmatrix(:)));
 % Fmatrix(Fmatrix > 0) = 1;
@@ -66,7 +64,7 @@ for i = 1:length(ratio_thresholds)
     end
 end
 hold on;
-scatter(1,1.7,70,'o','MarkerEdgeColor','black','LineWidth',1.5);
+scatter(0.6,1.8,70,'o','MarkerEdgeColor','black','LineWidth',1.5);
 % hold on;
 % scatter(0.001,1.4,70,'o','MarkerEdgeColor','black','LineWidth',1.5);
 % for i = 1:203

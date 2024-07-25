@@ -1,4 +1,4 @@
-masses = [1,1.7];
+masses = [0.6,1.8];
 phase = 0;
 ta = 138;
 datalen = 512;
@@ -7,7 +7,7 @@ sampFreq = 4096;
 type = 2;
 
 signal = gensignal(masses, phase, ta, datalen, snr, sampFreq, type);
-[s,f,t] = spectrogram(signal((ta-0.1)*sampFreq:(ta+0.5)*sampFreq), 256, [],[], 4096);
+[s,f,t] = spectrogram(signal((ta-0.6)*sampFreq:(ta+0.1)*sampFreq), 256, [],[], 4096);
 logS = log10(abs(s));
 fmin = find(f <= 32, 1, 'last');
 fmax = find(f <= 1010, 1, 'last');
